@@ -41,6 +41,6 @@ export function renderImage(img: GeneratedImage, date: string): RenderedImage {
   };
 }
 
-export function renderWechatImages(input: ImageInput, date: string): RenderedImage[] {
-  return buildImages(input).map((img) => renderImage(img, date));
+export function renderWechatImages(input: ImageInput, date: string, kinds?: string[]): RenderedImage[] {
+  return buildImages(input, kinds).map((img) => renderImage(img, date));
 }

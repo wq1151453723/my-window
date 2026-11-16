@@ -10,6 +10,8 @@ import { createDraft, getAccessToken, uploadVoiceMaterial, wechatCredentials, we
 import { IMAGE_DIR, renderWechatImages, type RenderedImage } from './render.js';
 import type { ImageInput } from './images.js';
 
+/** 公众号只发 AI 学习：封面 + 讲次海报 + AI 学习配图 */
+export const WECHAT_IMAGE_KINDS = ['cover', 'poster', 'course'];
 export function dateLineOf(date: string): string {
   const d = new Date(`${date}T00:00:00+08:00`);
   const week = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"][d.getDay()];
@@ -26,13 +28,24 @@ export function collectWechatDoc(date: string): WechatDoc {
 
 async function imageInput(date: string): Promise<ImageInput> {
   const doc = collectWechatDoc(date);
+  const weekKey = isoWeekKey(new Date(`${date}T12:00:00+08:00`));
+  let series: { t: number[]; c: number[] } | null = null;
+  try {
+    series = await fetchHistory("^GSPC", 30);
+  } catch {
+    series = null;
+  }
   return {
     date,
     dateLine: doc.dateLine,
+    books: getLatest("books") ?? null,
     course: getLatest("ai-course") ?? null,
+    tools: listAiToolsByWeek(weekKey),
+    markets: getLatest("markets") ?? null,
+    world: getLatest("world") ?? null,
+    indexSeries: series,
   };
 }
-
 const manifestPath = (date: string) => path.join(IMAGE_DIR, `${date}-manifest.json`);
 
 export async function ensureWechatImages(date: string, force = false): Promise<RenderedImage[]> {
@@ -48,7 +61,7 @@ export async function ensureWechatImages(date: string, force = false): Promise<R
     }
   }
   const input = await imageInput(date);
-  const rendered = renderWechatImages(input, date);
+  const rendered = renderWechatImages(input, date, WECHAT_IMAGE_KINDS);
   fs.mkdirSync(IMAGE_DIR, { recursive: true });
   fs.writeFileSync(manifestPath(date), JSON.stringify(rendered, null, 2), "utf8");
   return rendered;
@@ -64,6 +77,15 @@ export interface WechatPreview {
   audioSeconds: number | null;
   images: RenderedImage[];
   status: ReturnType<typeof wechatStatus>;
+}
+
+/** 网页端静态站：生成全部板块配图 */
+export async function ensureSiteImages(date: string): Promise<RenderedImage[]> {
+  const input = await imageInput(date);
+  const rendered = renderWechatImages(input, date);
+  fs.mkdirSync(IMAGE_DIR, { recursive: true });
+  fs.writeFileSync(manifestPath(date), JSON.stringify(rendered, null, 2), "utf8");
+  return rendered;
 }
 
 export async function buildWechatPreview(date: string): Promise<WechatPreview> {

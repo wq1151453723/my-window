@@ -82,6 +82,13 @@ npx tsx src/server/cli/check-keys.ts       # 密钥装载状态（只打印长�
 
 硬约束：**Edge 朗读必须在境外节点**；微信草稿箱 API 需要固定公网 IP（认证号 + IP 白名单）。
 
+### 已上云（免费）
+
+- 仓库：https://github.com/wq1151453723/my-window
+- 公网 24/7：**https://wq1151453723.github.io/my-window/**
+- 公众号稿：https://wq1151453723.github.io/my-window/wechat.html
+- 每天 23:05 UTC（北京 07:05）自动生成并发布；本机照常可用（本机出稿更快更即时）。
+
 
 ## 公众号日报
 

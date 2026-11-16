@@ -92,7 +92,7 @@ export function buildCover(input: ImageInput): GeneratedImage {
     labels
       .map((l, i) => bodyText(60 + i * 160, 312, l, 26, INK, HEI, 700))
       .join(""),
-    bodyText(840 - 0, 352, "每天一份 · 都能朗读", 20, MUTED),
+    bodyText(60, 352, "每天一份 · 都能朗读 · 都能带图", 20, MUTED),
   ].join("");
   return { kind: "cover", label: "公众号封面", width: w, height: h, svg: frame(w, h, body) };
 }
@@ -351,11 +351,16 @@ export function buildLessonPoster(input: ImageInput): GeneratedImage {
   return { kind: "poster", label: "讲次海报", width: w, height: h, svg: frame(w, h, body) };
 }
 
-export function buildImages(input: ImageInput): GeneratedImage[] {
-  const out: GeneratedImage[] = [buildCover(input)];
+export function buildImages(input: ImageInput, kinds?: string[]): GeneratedImage[] {
+  const all: GeneratedImage[] = [buildCover(input)];
+  if (input.books) all.push(buildBooksImage(input.books));
   if (input.course) {
-    out.push(buildLessonPoster(input));
-    out.push(buildCourseImage(input.course));
+    all.push(buildLessonPoster(input));
+    all.push(buildCourseImage(input.course));
   }
-  return out;
+  if (input.tools?.length) all.push(buildToolsImage(input.tools));
+  if (input.markets) all.push(buildMarketsImage(input.markets, input.indexSeries));
+  if (input.world) all.push(buildWorldImage(input.world));
+  if (!kinds) return all;
+  return all.filter((img) => kinds.includes(img.kind));
 }

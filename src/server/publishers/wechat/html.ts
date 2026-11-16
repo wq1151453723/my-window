@@ -29,7 +29,7 @@ function figure(src: string): string {
 function infoBlock(k: string, v: string): string {
   if (!v) return "";
   return (
-    `<p style="margin:0 0 0.9em;font-size:16px;line-height:1.8;color:${INK};">` +
+    `<p style="margin:0 0 0.9em;max-width:680px;max-width:680px;font-size:16px;line-height:1.8;color:${INK};">` +
     `<strong style="color:${ACCENT};font-weight:700;">${esc(k)}　</strong>${esc(v)}` +
     `</p>`
   );
@@ -55,7 +55,7 @@ export interface WechatDoc {
 export function renderWechatHtml(doc: WechatDoc, images: Record<string, string> = {}): string {
   const parts: string[] = [];
   parts.push(`<p style="margin:0 0 0.8em;font-size:13px;color:${MUTED};letter-spacing:0.5px;">${esc(doc.dateLine)}</p>`);
-  parts.push(`<p style="margin:0 0 1.2em;font-size:16px;line-height:1.8;color:${INK};">${esc(doc.digest)}</p>`);
+  parts.push(`<p style="margin:0 0 1.2em;max-width:680px;max-width:680px;font-size:16px;line-height:1.8;color:${INK};">${esc(doc.digest)}</p>`);
   if (doc.posterKind && images[doc.posterKind]) parts.push(figure(images[doc.posterKind]));
   parts.push(label(`AI 学习 · 第 ${doc.lessonNo} 讲 · ${doc.stageTitle}`));
   parts.push(`<p style="margin:0 0 0.7em;font-size:18px;font-weight:700;line-height:1.5;color:#1a1a1a;">${esc(doc.lessonTitle)}</p>`);
@@ -66,7 +66,7 @@ export function renderWechatHtml(doc: WechatDoc, images: Record<string, string> 
     parts.push(
       `<ul style="margin:0.2em 0 1.3em;padding-left:1.1em;list-style:none;">` +
         doc.takeaways
-          .map((t) => `<li style="margin:0 0 0.6em;font-size:16px;line-height:1.75;color:${INK};">· ${esc(t)}</li>`)
+          .map((t) => `<li style="margin:0 0 0.6em;max-width:680px;font-size:16px;line-height:1.75;color:${INK};">· ${esc(t)}</li>`)
           .join("") +
         `</ul>`
     );

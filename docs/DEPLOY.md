@@ -158,7 +158,25 @@ schtasks /Create /TN "MyWindow" /TR "powershell -WindowStyle Hidden -File E:\软
 
 零成本，但电脑得一直开着。
 
-## 五、迁移到云上要改什么
+## 五、本项目已上云的实际情况（2026-11-16 实测）
+
+- 仓库：https://github.com/wq1151453723/my-window （**已转公开**，这样免费账户才能用 GitHub Pages）
+- 公网网址：**https://wq1151453723.github.io/my-window/**（24/7，手机可开，9 篇文章 + 9 个音频播放器 + 配图）
+- 公众号稿：`https://wq1151453723.github.io/my-window/wechat.html`（图片已换成「【在此插入图片：…】」占位）
+- Actions：https://github.com/wq1151453723/my-window/actions （每天 23:05 UTC = 北京 07:05 自动跑）
+- Secrets 已配三个大模型 Key；Pages 开关用仓库变量 `ENABLE_PAGES=true` 控制；
+- 发布方式：工作流生成后**直推 gh-pages 分支**（不依赖 deploy-pages，省掉一层排队），Pages 源设为分支（legacy）。
+- 首次云端运行实测：5m33s 完成生成 + 导出 + 清理 + 发布，产物 17.78 MB。
+
+**注意**：GitHub 免费 runner 繁忙时会排队（实测等过 29 分钟），所以「每天 07:05 出稿」实际可能延后 5–30 分钟。
+
+**踩坑（Windows 特有）**：用 PowerShell 5.1 的 `Get-Content -Raw` / `Set-Content` 处理 UTF-8 文件会按系统 ANSI 码页（本机 GBK）解码再写回，中文直接变成乱码。
+本项目因此把线上 index.html 写坏过一次。**规则**：UTF-8 文件一律用 Node 处理（`fs.readFileSync/writeFileSync` + `utf8`），
+或用 `Get-Content -Encoding UTF8` / `Set-Content -Encoding UTF8` 显式指定；网页文件优先整份用源文件覆盖，不做文本级替换。
+（云端 Actions 跑在 Linux，不受此影响。）
+要卡准点，就用方案 A（VPS + Docker，容器内定时器不受队列影响）。
+
+## 六、迁移到云上要改什么
 
 代码**零改动**。只需要：
 
