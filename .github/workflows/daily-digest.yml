@@ -26,40 +26,38 @@ jobs:
           node-version: "24"
       - run: npm ci --no-audit --no-fund
 
-      - name: 生成当日内容
+      - name: gen-daily
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           MINIMAX_CN_API_KEY: ${{ secrets.MINIMAX_CN_API_KEY }}
           XIAOMI_TOKEN_PLAN_CN_API_KEY: ${{ secrets.XIAOMI_TOKEN_PLAN_CN_API_KEY }}
-          WECHAT_APP_ID: ${{ secrets.WECHAT_APP_ID }}
-          WECHAT_APP_SECRET: ${{ secrets.WECHAT_APP_SECRET }}
           TZ: Asia/Shanghai
         run: npx tsx src/server/cli/generate-daily.ts
 
-      - name: 导出产物
+      - name: export
         run: npx tsx scripts/export-today.ts
 
-      - name: 清理旧音频
+      - name: prune
         env:
           KEEP_DAYS: "30"
         run: npx tsx scripts/prune-exports.ts
 
-      - name: 保留产物（下载即用）
+      - name: artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-window-${{ github.run_id }}
           path: data/exports/
           retention-days: 14
 
-      - name: 上传静态站点
+      - name: pages-upload
+        if: ${{ vars.ENABLE_PAGES == 'true' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: data/exports/site
 
-      - name: 发布到 GitHub Pages
+      - name: pages-deploy
+        if: ${{ vars.ENABLE_PAGES == 'true' }}
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+          environment: github-pages
