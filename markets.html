@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>我的窗口 · 2026-11-21 · 全球金融</title>
+<style>*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f5f1e9;color:#17130e;font:16px/1.8 -apple-system,PingFang SC,Microsoft YaHei,system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;height:auto;display:block}
+a{color:#b0341f}
+.top{position:sticky;top:0;z-index:9;background:rgba(245,241,233,.93);backdrop-filter:blur(10px);border-bottom:1px solid #e6ded0;padding:11px 16px;display:flex;align-items:baseline;gap:10px}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:20px}
+.brand i{font-style:normal;font-size:12px;letter-spacing:.2em;color:#b0341f;font-family:system-ui;font-weight:700;margin-left:6px}
+.top .date{margin-left:auto;font-size:12px;color:#6a6153;white-space:nowrap}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+.banner{margin:16px 0 0;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px -16px rgba(23,19,14,.22)}
+.hero{padding:22px 2px 4px}
+.kicker{font-size:12px;letter-spacing:.2em;color:#b0341f;font-weight:700;margin:0 0 8px}
+h1{font-family:Georgia,serif;font-size:30px;line-height:1.24;margin:0 0 6px;letter-spacing:-.01em}
+.dateline{font-size:14px;color:#6a6153;margin:0 0 16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
+.stat{background:#fffdf8;border:1px solid #e6ded0;border-radius:12px;padding:11px 12px 10px}
+.stat b{display:block;font-family:Georgia,serif;font-size:22px;line-height:1.15;color:#17130e}
+.stat span{font-size:12px;color:#6a6153;letter-spacing:.06em}
+.toc{display:flex;gap:13px;flex-wrap:wrap;font-size:14px;padding:0 0 16px;border-bottom:1px solid #e6ded0;margin-bottom:18px}
+.toc a{color:#6a6153;text-decoration:none;border-bottom:1px solid #e0d8c8;padding-bottom:2px}
+.card{background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:18px;margin:0 0 16px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.card h2{font-family:Georgia,serif;font-size:22px;line-height:1.3;margin:0 0 10px}
+.art{width:100%;border-radius:10px;margin:12px 0 2px}
+.sum{font-size:15px;line-height:1.75;color:#4a4238;margin:0 0 12px}
+.pts{margin:0 0 12px;padding:0;list-style:none}
+.pts li{position:relative;padding-left:16px;font-size:15px;line-height:1.7;margin-bottom:6px;color:#3f3f3f}
+.pts li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:9px;background:#b0341f}
+details{border-top:1px solid #efe9df}
+summary{list-style:none;cursor:pointer;min-height:46px;display:flex;align-items:center;font-size:14px;color:#b0341f;font-weight:600;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"展开全文";margin-left:auto;font-weight:400;color:#6f6a5e;font-size:12px}
+details[open] summary::after{content:"收起"}
+.body{font-size:17px;line-height:1.95;color:#3f3f3f;padding-top:10px}
+.body p{margin:0 0 1.1em}
+.body h2{font-family:Georgia,serif;font-size:17px;margin:1.4em 0 .5em}
+.body h3{font-size:17px;margin:1.2em 0 .4em}
+.body ul{padding-left:18px;margin:0 0 1em}
+.body li{margin-bottom:.4em}
+.audio{width:100%;height:40px;margin:12px 0 4px}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 12px}
+.q{background:#faf7f0;border:1px solid #ece4d6;border-radius:10px;padding:8px 10px}
+.q b{display:block;font-size:14px;font-weight:600;color:#17130e}
+.q span{font-size:14px;font-variant-numeric:tabular-nums}
+.up{color:#b0341f}.down{color:#2f5d4c}
+.events{counter-reset:ev;list-style:none;padding:0;margin:12px 0}
+.events li{counter-increment:ev;position:relative;padding-left:30px;margin-bottom:9px;font-size:15px;line-height:1.6;color:#2f2a22}
+.events li::before{content:counter(ev,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:Georgia,serif;font-size:15px;color:#b0341f}
+.tools{list-style:none;padding:0;margin:12px 0}
+.tools li{border-top:1px solid #f0e9dd;padding:9px 0;font-size:14px;line-height:1.6;color:#3f3f3f}
+.tools b{font-weight:600;color:#17130e}
+.tools em{font-style:normal;color:#8a6314;margin-left:6px;font-size:12px}
+.prog{height:4px;border-radius:4px;background:#e6ded0;overflow:hidden;margin:10px 0 2px}
+.prog i{display:block;height:100%;background:#b0341f}
+.meta{font-size:12px;color:#6f6a5e;margin:8px 0 0}
+footer{border-top:1px solid #e6ded0;margin-top:10px;padding:20px 0 44px;font-size:12px;color:#6f6a5e;line-height:1.9}
+footer a{color:#6a6153;word-break:break-all}
+@media(min-width:720px){.wrap{padding:0 24px}.quotes{grid-template-columns:repeat(3,1fr)}}.tabs{display:flex;gap:15px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding:10px 16px;border-bottom:1px solid #e6ded0;background:rgba(245,241,233,.95);scrollbar-width:none;position:sticky;top:57px;z-index:8}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{font-size:14px;color:#6a6153;text-decoration:none;padding:4px 0;flex:0 0 auto}
+.tabs a.on{color:#b0341f;font-weight:700}
+.entry{display:block;text-decoration:none;color:inherit;background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:16px 16px 14px;margin:0 0 14px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.entry h2{font-family:Georgia,serif;font-size:20px;line-height:1.35;margin:0 0 8px}
+.entry .sum{font-size:14px;line-height:1.7;color:#4a4238;margin:0 0 10px}
+.entry .go{font-size:13px;color:#b0341f;font-weight:600}
+.entry .art{margin:10px 0 12px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:#6a6153;text-decoration:none;margin:8px 0 0}</style></head><body>
+<div class="top"><a class="brand" href="index.html">我的窗口<i>DAILY DIGEST</i></a><div class="date">2026-11-21</div></div>
+<nav class="tabs"><a href="index.html">今日</a><a href="books.html">书籍学习</a><a href="ai-course.html">AI 学习</a><a href="ai-tools.html">前沿 AI</a><a href="markets.html" class="on">全球金融</a><a href="world.html">全球局势</a></nav>
+<div class="wrap">
+<a class="back" href="index.html">‹ 回到今日</a><section class="card" id="markets"><p class="kicker">全球与中国金融</p><h2>AI交易踩踏，全球风险资产同步下挫</h2><img class="art" src="images/2026-11-21-markets.png" alt="金融配图"><p class="sum">11月21日，全球市场经历了一个风险偏好明显收缩的交易日。美股三大指数全线下跌，纳斯达克跌5.28%，标普500跌3.7%，道琼斯跌1.93%。恐慌指数单日上涨15.8%，报28.44，显示市场避险情绪升温。亚太市场同步走弱，恒生指数跌1.89%，上证指数跌1.23%，深证成指跌3.09%，创业板指跌3.54%。商品方面，黄金期货跌3.98%，原油期货涨1.43%，美元指数微跌0.11%，比特币跌4.86%。新闻标题显示，AI相关交易出现剧烈调整，英伟达跌逾14%，费城半导体指数重挫近11%，市场对AI估值和美联储利率路径的担忧可能仍在发酵。</p><div class="quotes"><div class="q"><b>标普500</b><span class="down">-3.70%</span></div><div class="q"><b>纳斯达克</b><span class="down">-5.28%</span></div><div class="q"><b>道琼斯</b><span class="down">-1.93%</span></div><div class="q"><b>恒生指数</b><span class="down">-1.89%</span></div><div class="q"><b>上证指数</b><span class="down">-1.23%</span></div><div class="q"><b>深证成指</b><span class="down">-3.09%</span></div></div><ul class="pts"><li>纳指单日跌5.28%，AI相关交易出现集中踩踏，恐慌指数涨15.8%。</li><li>黄金期货跌3.98%，创一年多新低，避险资产与风险资产同步走弱。</li><li>美联储官员表态利率必须更高，利率路径的不确定性仍在压制估值。</li><li>A股与港股同步回调，创业板指跌3.54%，成长风格承压更明显。</li></ul><details><summary>读完整讲解</summary><div class="body"><p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">这个交易日最醒目的数字，是纳斯达克跌了5.28%。这不是一个普通的回调幅度，而是科技股集中抛售的结果。新闻标题里提到，英伟达跌逾14%，费城半导体指数重挫近11%，AI交易出现雪崩式调整。<strong style="color:#17130e;font-weight:600;">当市场最拥挤的交易方向开始松动，卖出会自我强化</strong>，因为杠杆资金需要降仓位，基金需要应对赎回，程序化交易也会跟着信号走。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">恐慌指数涨了15.8%，报28.44。恐慌指数衡量的是市场对未来波动程度的预期，涨得越快，说明越多人在买保险。<strong style="color:#17130e;font-weight:600;">这个数字本身不预测方向，但它说明市场情绪已经从乐观转向紧张</strong>。同一天，标普500跌3.7%，道琼斯跌1.93%，道指的跌幅明显更小，因为它的成分里传统行业权重更高，科技含量相对低一些。这种分化说明，抛售主要集中在成长股和AI相关标的。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">亚太市场也没能独立。恒生指数跌1.89%，上证指数跌1.23%，深证成指跌3.09%，创业板指跌3.54%。<strong style="color:#17130e;font-weight:600;">创业板指的跌幅接近深证成指的两倍，说明成长风格承压更明显</strong>。新闻标题里提到，多家机构看好A股估值与韧性，但这是机构观点，不是当天价格走势的结论。对普通人来说，如果你持有的是偏成长风格的基金，这一天的账面回撤大概率比宽基指数更明显。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">商品市场的信号更复杂。黄金期货跌3.98%，新闻标题说国际金价创一年多新低。<strong style="color:#17130e;font-weight:600;">黄金通常被视为避险资产，但这次它和股票一起跌</strong>，可能说明部分投资者在被动降杠杆，卖出流动性好的资产来补其他地方的保证金。原油期货涨1.43%，走势和股票相反，新闻标题提到中东供应上升和原油三周大跌两成，油价的方向可能更多受供需因素影响，而不是单纯的风险偏好。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">美元指数微跌0.11%，报103.84，波动不大。比特币跌4.86%，报58914.4，作为高波动资产，它的跌幅小于纳指，但绝对水平仍然说明风险偏好收缩。<strong style="color:#17130e;font-weight:600;">加密资产和科技股同向下跌，说明这轮调整不是单一市场的事件</strong>，而是跨资产的仓位调整。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">利率方面的信息值得关注。新闻标题里，美联储保尔森说“不预设加息节奏，但利率必须更高”，美联储理事库克说“通胀压力紧迫，利率需更快上调”。<strong style="color:#17130e;font-weight:600;">这些表态意味着，利率路径还没有定论，而估值对利率敏感</strong>。如果市场预期利率在高位停留更久，成长股的估值压力可能还会持续。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">还有一个细节：新闻标题提到“大空头”Burry称英伟达和半导体ETF的看跌期权均减半。这可能是获利了结的信号，也可能是仓位调整，单凭一条标题无法判断方向。<strong style="color:#17130e;font-weight:600;">值得关注的是，做空力量如果开始撤退，波动可能收敛，但也可能只是换手</strong>。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">对普通人来说，这一天最直接的感受是基金账户的回撤。如果你持有科技类基金或QDII，账面波动会比较大。如果你在还房贷，美元指数和利率预期的变化可能间接影响资金成本，但短期内的传导并不直接。<strong style="color:#17130e;font-weight:600;">黄金下跌对准备买金饰的人是价格上的好消息，但对持有黄金ETF的人来说是账面损失</strong>。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">整体来看，这一天是风险资产同步去杠杆的交易日。AI交易的调整是核心线索，但利率预期、机构仓位和跨资产联动都在起作用。<strong style="color:#17130e;font-weight:600;">当前判断最大的不确定性在于，这轮调整是短期踩踏还是趋势性重估</strong>，目前还没有足够信息给出结论。</p></div></details><audio class="audio" controls preload="none" src="audio/2026-11-21-markets.mp3"></audio><p class="meta">生成于 2026-11-20 23:51</p></section>
+<footer>
+<p>《我的窗口》· 每日学习订阅。内容基于公开数据与来源生成，仅供参考，不构成投资建议。</p>
+<p>来源：<a href="https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html">Nvidia stock plunges 14%</a> · <a href="https://arstechnica.com/tech-policy/2026/11/fcc-orders-california-to-stop-enforcing-phone-service-rules-against-att/">Trump FCC declares Calif</a> · <a href="https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/">SpaceX's Starshield trou</a> · <a href="https://www.cnbc.com/2026/11/20/treasury-secretary-scott-bessent.html">Trump says he discussed </a> · <a href="https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/">Google rolls out new sea</a> · <a href="https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html">Zscaler stock jumps 18% </a> · <a href="https://hackaday.com/2026/11/20/old-firewire-audio-interface-gets-usb-c-upgrade/">Old FireWire Audio Inter</a> · <a href="https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/">Experts warn: Nearly eve</a> · <a href="https://github.com/erkamyaman/rust-anything">erkamyaman/rust-anything</a> · <a href="https://github.com/krisgfx9/Wireless-Device-Battery-Monitor">krisgfx9/Wireless-Device</a> · <a href="https://github.com/gylive/google-ultra">gylive/google-ultra (Git</a> · <a href="https://github.com/Hut-hzf/ung220z-tool">Hut-hzf/ung220z-tool (Gi</a></p>
+<p>页面由 GitHub Actions 每日自动生成并发布。</p>
+</footer>
+</div></body></html>

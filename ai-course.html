@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>我的窗口 · 2026-11-21 · AI 学习</title>
+<style>*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f5f1e9;color:#17130e;font:16px/1.8 -apple-system,PingFang SC,Microsoft YaHei,system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;height:auto;display:block}
+a{color:#b0341f}
+.top{position:sticky;top:0;z-index:9;background:rgba(245,241,233,.93);backdrop-filter:blur(10px);border-bottom:1px solid #e6ded0;padding:11px 16px;display:flex;align-items:baseline;gap:10px}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:20px}
+.brand i{font-style:normal;font-size:12px;letter-spacing:.2em;color:#b0341f;font-family:system-ui;font-weight:700;margin-left:6px}
+.top .date{margin-left:auto;font-size:12px;color:#6a6153;white-space:nowrap}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+.banner{margin:16px 0 0;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px -16px rgba(23,19,14,.22)}
+.hero{padding:22px 2px 4px}
+.kicker{font-size:12px;letter-spacing:.2em;color:#b0341f;font-weight:700;margin:0 0 8px}
+h1{font-family:Georgia,serif;font-size:30px;line-height:1.24;margin:0 0 6px;letter-spacing:-.01em}
+.dateline{font-size:14px;color:#6a6153;margin:0 0 16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
+.stat{background:#fffdf8;border:1px solid #e6ded0;border-radius:12px;padding:11px 12px 10px}
+.stat b{display:block;font-family:Georgia,serif;font-size:22px;line-height:1.15;color:#17130e}
+.stat span{font-size:12px;color:#6a6153;letter-spacing:.06em}
+.toc{display:flex;gap:13px;flex-wrap:wrap;font-size:14px;padding:0 0 16px;border-bottom:1px solid #e6ded0;margin-bottom:18px}
+.toc a{color:#6a6153;text-decoration:none;border-bottom:1px solid #e0d8c8;padding-bottom:2px}
+.card{background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:18px;margin:0 0 16px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.card h2{font-family:Georgia,serif;font-size:22px;line-height:1.3;margin:0 0 10px}
+.art{width:100%;border-radius:10px;margin:12px 0 2px}
+.sum{font-size:15px;line-height:1.75;color:#4a4238;margin:0 0 12px}
+.pts{margin:0 0 12px;padding:0;list-style:none}
+.pts li{position:relative;padding-left:16px;font-size:15px;line-height:1.7;margin-bottom:6px;color:#3f3f3f}
+.pts li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:9px;background:#b0341f}
+details{border-top:1px solid #efe9df}
+summary{list-style:none;cursor:pointer;min-height:46px;display:flex;align-items:center;font-size:14px;color:#b0341f;font-weight:600;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"展开全文";margin-left:auto;font-weight:400;color:#6f6a5e;font-size:12px}
+details[open] summary::after{content:"收起"}
+.body{font-size:17px;line-height:1.95;color:#3f3f3f;padding-top:10px}
+.body p{margin:0 0 1.1em}
+.body h2{font-family:Georgia,serif;font-size:17px;margin:1.4em 0 .5em}
+.body h3{font-size:17px;margin:1.2em 0 .4em}
+.body ul{padding-left:18px;margin:0 0 1em}
+.body li{margin-bottom:.4em}
+.audio{width:100%;height:40px;margin:12px 0 4px}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 12px}
+.q{background:#faf7f0;border:1px solid #ece4d6;border-radius:10px;padding:8px 10px}
+.q b{display:block;font-size:14px;font-weight:600;color:#17130e}
+.q span{font-size:14px;font-variant-numeric:tabular-nums}
+.up{color:#b0341f}.down{color:#2f5d4c}
+.events{counter-reset:ev;list-style:none;padding:0;margin:12px 0}
+.events li{counter-increment:ev;position:relative;padding-left:30px;margin-bottom:9px;font-size:15px;line-height:1.6;color:#2f2a22}
+.events li::before{content:counter(ev,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:Georgia,serif;font-size:15px;color:#b0341f}
+.tools{list-style:none;padding:0;margin:12px 0}
+.tools li{border-top:1px solid #f0e9dd;padding:9px 0;font-size:14px;line-height:1.6;color:#3f3f3f}
+.tools b{font-weight:600;color:#17130e}
+.tools em{font-style:normal;color:#8a6314;margin-left:6px;font-size:12px}
+.prog{height:4px;border-radius:4px;background:#e6ded0;overflow:hidden;margin:10px 0 2px}
+.prog i{display:block;height:100%;background:#b0341f}
+.meta{font-size:12px;color:#6f6a5e;margin:8px 0 0}
+footer{border-top:1px solid #e6ded0;margin-top:10px;padding:20px 0 44px;font-size:12px;color:#6f6a5e;line-height:1.9}
+footer a{color:#6a6153;word-break:break-all}
+@media(min-width:720px){.wrap{padding:0 24px}.quotes{grid-template-columns:repeat(3,1fr)}}.tabs{display:flex;gap:15px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding:10px 16px;border-bottom:1px solid #e6ded0;background:rgba(245,241,233,.95);scrollbar-width:none;position:sticky;top:57px;z-index:8}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{font-size:14px;color:#6a6153;text-decoration:none;padding:4px 0;flex:0 0 auto}
+.tabs a.on{color:#b0341f;font-weight:700}
+.entry{display:block;text-decoration:none;color:inherit;background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:16px 16px 14px;margin:0 0 14px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.entry h2{font-family:Georgia,serif;font-size:20px;line-height:1.35;margin:0 0 8px}
+.entry .sum{font-size:14px;line-height:1.7;color:#4a4238;margin:0 0 10px}
+.entry .go{font-size:13px;color:#b0341f;font-weight:600}
+.entry .art{margin:10px 0 12px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:#6a6153;text-decoration:none;margin:8px 0 0}</style></head><body>
+<div class="top"><a class="brand" href="index.html">我的窗口<i>DAILY DIGEST</i></a><div class="date">2026-11-21</div></div>
+<nav class="tabs"><a href="index.html">今日</a><a href="books.html">书籍学习</a><a href="ai-course.html" class="on">AI 学习</a><a href="ai-tools.html">前沿 AI</a><a href="markets.html">全球金融</a><a href="world.html">全球局势</a></nav>
+<div class="wrap">
+<a class="back" href="index.html">‹ 回到今日</a><section class="card" id="ai-course"><p class="kicker">AI 学习 · 第 1 讲 · 拆开一次调用</p><h2>一次 chat/completions 请求的完整旅程</h2><img class="art" src="images/2026-11-21-course.png" alt="AI 学习配图"><p class="sum">你每天发出的那个 POST /v1/chat/completions，看起来只是把一段 JSON 丢出去再收回来，但请求头里的鉴权、请求体里的 messages、stream 开关、system prompt，每一处都对应模型内部的一个环节。本讲把一次调用拆成四段：网关鉴权与路由、消息拼装成上下文、模型逐 token 生成、以及流式返回时 SSE 如何把 token 一段段推回来。讲完你会知道为什么字段顺序会影响结果、为什么流式能降低等待感却不降低总耗时、以及哪些字段出错时现象会出现在哪一层。</p><ul class="pts"><li>鉴权与限流发生在网关层，模型还没开始算，报错在这一层说明请求根本没进模型。</li><li>messages 会被拼成一条线性上下文，system prompt 通常被放在最前面并影响后续所有 token 的生成。</li><li>stream 打开后返回的是 SSE 事件流，每个事件带一小段增量文本，总耗时不变但首字更早。</li><li>模型是逐 token 生成的，每个 token 都要看前面所有 token，所以上下文越长通常越慢越贵。</li></ul><div class="prog"><i style="width:3%"></i></div><p class="meta">课程进度 1 / 40 讲</p><details><summary>读完整讲解</summary><div class="body"><p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">先说你看到的现象。同一段 messages，有时候几百毫秒就开始吐字，有时候要等好几秒才一次性返回一大段；有时候改一个字段，输出风格就变了；有时候报错信息很短，压根没提到模型。这些差异不是随机的，它们分别发生在一次调用的不同层。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">大白话直觉：一次调用像寄快递。你先过门禁（鉴权），再把包裹按格式打包（请求体），快递员送到仓库（模型），仓库按你的清单逐件取货（逐 token 生成），最后要么整箱送到（非流式），要么一件件往外递（流式）。每一层出的问题，现象都不一样。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">第一层是网关。请求头里的鉴权信息在这里被校验，同时做限流和路由。这一层不碰模型权重，只决定你有没有资格、该被送到哪个后端。所以鉴权失败、配额耗尽、限流这类错误，通常在模型开始计算之前就返回了，响应里也不会出现任何生成内容。值得注意的是，这一层还会做请求体大小和字段合法性检查，字段名写错时往往在这里就被拦下。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">第二层是消息拼装。messages 是一个数组，每个元素带角色和内容。服务端会把它拼成一条线性上下文：通常是 system 在前，然后按顺序接上用户和助手的轮次。system prompt 在这里不是特殊魔法，它只是被放在最前面的一段文本，但因为模型是逐 token 看前文的，最前面的内容会影响后面每一个 token 的生成概率。所以改 system，往往改的是整段输出的基调，而不是某一句。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">第三层是生成。模型不是一次性写出整段话，而是每次预测下一个 token，把它接到序列末尾，再预测下一个。伪代码大致是：while 未结束: 取当前序列 → 算下一个 token 的概率分布 → 采样一个 → 追加到序列。人话就是：每吐一个字，模型都要把前面所有字重新看一遍，所以上下文越长，单步计算通常越重。这解释了为什么长对话会变慢、变贵，也解释了为什么输出会飘：每一步都是概率采样，不是查表。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">第四层是返回。stream 关掉时，服务端等整段生成完再一次性返回，你拿到的是完整结果。stream 打开时，返回的是 SSE，也就是服务器推送事件：一条长连接上，服务端把每个增量片段作为独立事件推回来，客户端逐条解析再拼起来。总生成时间没变，但首字出现得更早，所以体感更快。值得注意的是，流式下错误可能出现在流中间，而不是一开始就报。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">锚点场景对照。你写的那行 POST /v1/chat/completions，请求头里的鉴权对应第一层网关；请求体里的 messages 和 system 对应第二层拼装；stream 字段决定第四层是整包返回还是 SSE 事件流；而模型逐 token 生成这件事，对应你看到的每个增量片段和最终结束标记。换句话说，你请求体里每个键，背后都挂着上面某一层的机制。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">与本周动态的关联。本周有一条「OpenAI makes it much harder for attackers to extract how its latest AI models think」，讲的是厂商在收紧对模型内部信息的提取。它说明一个机制问题：模型内部的计算过程并不在 API 返回里，你拿到的只有 token 和少量元信息，所以想理解一次调用发生了什么，只能从请求和返回这两端去推断，这也正是本讲拆四层的意义。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">边界与不确定性。不同厂商在网关行为、SSE 事件格式、system 的处理方式上并不完全一致，具体细节取决于服务商实现，本讲给的是通用分层，不保证每一层都按同样顺序发生。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">现在你能解释：为什么同一个请求，有时卡在鉴权、有时卡在生成、有时卡在流的中途。</p></div></details><audio class="audio" controls preload="none" src="audio/2026-11-21-ai-course-L1.mp3"></audio></section>
+<footer>
+<p>《我的窗口》· 每日学习订阅。内容基于公开数据与来源生成，仅供参考，不构成投资建议。</p>
+<p>来源：<a href="https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html">Nvidia stock plunges 14%</a> · <a href="https://arstechnica.com/tech-policy/2026/11/fcc-orders-california-to-stop-enforcing-phone-service-rules-against-att/">Trump FCC declares Calif</a> · <a href="https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/">SpaceX's Starshield trou</a> · <a href="https://www.cnbc.com/2026/11/20/treasury-secretary-scott-bessent.html">Trump says he discussed </a> · <a href="https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/">Google rolls out new sea</a> · <a href="https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html">Zscaler stock jumps 18% </a> · <a href="https://hackaday.com/2026/11/20/old-firewire-audio-interface-gets-usb-c-upgrade/">Old FireWire Audio Inter</a> · <a href="https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/">Experts warn: Nearly eve</a> · <a href="https://github.com/erkamyaman/rust-anything">erkamyaman/rust-anything</a> · <a href="https://github.com/krisgfx9/Wireless-Device-Battery-Monitor">krisgfx9/Wireless-Device</a> · <a href="https://github.com/gylive/google-ultra">gylive/google-ultra (Git</a> · <a href="https://github.com/Hut-hzf/ung220z-tool">Hut-hzf/ung220z-tool (Gi</a></p>
+<p>页面由 GitHub Actions 每日自动生成并发布。</p>
+</footer>
+</div></body></html>
