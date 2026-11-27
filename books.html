@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>我的窗口 · 2026-11-27 · 书籍学习</title>
+<style>*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f5f1e9;color:#17130e;font:16px/1.8 -apple-system,PingFang SC,Microsoft YaHei,system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;height:auto;display:block}
+a{color:#b0341f}
+.top{position:sticky;top:0;z-index:9;background:rgba(245,241,233,.93);backdrop-filter:blur(10px);border-bottom:1px solid #e6ded0;padding:11px 16px;display:flex;align-items:baseline;gap:10px}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:20px}
+.brand i{font-style:normal;font-size:12px;letter-spacing:.2em;color:#b0341f;font-family:system-ui;font-weight:700;margin-left:6px}
+.top .date{margin-left:auto;font-size:12px;color:#6a6153;white-space:nowrap}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+.banner{margin:16px 0 0;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px -16px rgba(23,19,14,.22)}
+.hero{padding:22px 2px 4px}
+.kicker{font-size:12px;letter-spacing:.2em;color:#b0341f;font-weight:700;margin:0 0 8px}
+h1{font-family:Georgia,serif;font-size:30px;line-height:1.24;margin:0 0 6px;letter-spacing:-.01em}
+.dateline{font-size:14px;color:#6a6153;margin:0 0 16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
+.stat{background:#fffdf8;border:1px solid #e6ded0;border-radius:12px;padding:11px 12px 10px}
+.stat b{display:block;font-family:Georgia,serif;font-size:22px;line-height:1.15;color:#17130e}
+.stat span{font-size:12px;color:#6a6153;letter-spacing:.06em}
+.toc{display:flex;gap:13px;flex-wrap:wrap;font-size:14px;padding:0 0 16px;border-bottom:1px solid #e6ded0;margin-bottom:18px}
+.toc a{color:#6a6153;text-decoration:none;border-bottom:1px solid #e0d8c8;padding-bottom:2px}
+.card{background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:18px;margin:0 0 16px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.card h2{font-family:Georgia,serif;font-size:22px;line-height:1.3;margin:0 0 10px}
+.art{width:100%;border-radius:10px;margin:12px 0 2px}
+.sum{font-size:15px;line-height:1.75;color:#4a4238;margin:0 0 12px}
+.pts{margin:0 0 12px;padding:0;list-style:none}
+.pts li{position:relative;padding-left:16px;font-size:15px;line-height:1.7;margin-bottom:6px;color:#3f3f3f}
+.pts li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:9px;background:#b0341f}
+details{border-top:1px solid #efe9df}
+summary{list-style:none;cursor:pointer;min-height:46px;display:flex;align-items:center;font-size:14px;color:#b0341f;font-weight:600;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"展开全文";margin-left:auto;font-weight:400;color:#6f6a5e;font-size:12px}
+details[open] summary::after{content:"收起"}
+.body{font-size:17px;line-height:1.95;color:#3f3f3f;padding-top:10px}
+.body p{margin:0 0 1.1em}
+.body h2{font-family:Georgia,serif;font-size:17px;margin:1.4em 0 .5em}
+.body h3{font-size:17px;margin:1.2em 0 .4em}
+.body ul{padding-left:18px;margin:0 0 1em}
+.body li{margin-bottom:.4em}
+.audio{width:100%;height:40px;margin:12px 0 4px}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 12px}
+.q{background:#faf7f0;border:1px solid #ece4d6;border-radius:10px;padding:8px 10px}
+.q b{display:block;font-size:14px;font-weight:600;color:#17130e}
+.q span{font-size:14px;font-variant-numeric:tabular-nums}
+.up{color:#b0341f}.down{color:#2f5d4c}
+.events{counter-reset:ev;list-style:none;padding:0;margin:12px 0}
+.events li{counter-increment:ev;position:relative;padding-left:30px;margin-bottom:9px;font-size:15px;line-height:1.6;color:#2f2a22}
+.events li::before{content:counter(ev,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:Georgia,serif;font-size:15px;color:#b0341f}
+.tools{list-style:none;padding:0;margin:12px 0}
+.tools li{border-top:1px solid #f0e9dd;padding:9px 0;font-size:14px;line-height:1.6;color:#3f3f3f}
+.tools b{font-weight:600;color:#17130e}
+.tools em{font-style:normal;color:#8a6314;margin-left:6px;font-size:12px}
+.prog{height:4px;border-radius:4px;background:#e6ded0;overflow:hidden;margin:10px 0 2px}
+.prog i{display:block;height:100%;background:#b0341f}
+.meta{font-size:12px;color:#6f6a5e;margin:8px 0 0}
+footer{border-top:1px solid #e6ded0;margin-top:10px;padding:20px 0 44px;font-size:12px;color:#6f6a5e;line-height:1.9}
+footer a{color:#6a6153;word-break:break-all}
+@media(min-width:720px){.wrap{padding:0 24px}.quotes{grid-template-columns:repeat(3,1fr)}}.tabs{display:flex;gap:15px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding:10px 16px;border-bottom:1px solid #e6ded0;background:rgba(245,241,233,.95);scrollbar-width:none;position:sticky;top:57px;z-index:8}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{font-size:14px;color:#6a6153;text-decoration:none;padding:4px 0;flex:0 0 auto}
+.tabs a.on{color:#b0341f;font-weight:700}
+.entry{display:block;text-decoration:none;color:inherit;background:#fffdf8;border:1px solid #e6ded0;border-radius:14px;padding:16px 16px 14px;margin:0 0 14px;box-shadow:0 1px 2px rgba(23,19,14,.03)}
+.entry h2{font-family:Georgia,serif;font-size:20px;line-height:1.35;margin:0 0 8px}
+.entry .sum{font-size:14px;line-height:1.7;color:#4a4238;margin:0 0 10px}
+.entry .go{font-size:13px;color:#b0341f;font-weight:600}
+.entry .art{margin:10px 0 12px}
+.back{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:#6a6153;text-decoration:none;margin:8px 0 0}</style></head><body>
+<div class="top"><a class="brand" href="index.html">我的窗口<i>DAILY DIGEST</i></a><div class="date">2026-11-27</div></div>
+<nav class="tabs"><a href="index.html">今日</a><a href="books.html" class="on">书籍学习</a><a href="ai-course.html">AI 学习</a><a href="ai-tools.html">前沿 AI</a><a href="markets.html">全球金融</a><a href="world.html">全球局势</a></nav>
+<div class="wrap">
+<a class="back" href="index.html">‹ 回到今日</a><section class="card" id="books"><p class="kicker">书籍学习 · 社会学</p><h2>你的烦恼，可能不是你的问题</h2><img class="art" src="images/2026-11-27-books.png" alt="书籍学习配图"><p class="sum">很多人把失业、焦虑、婚恋不顺归咎于自己不够努力，但社会学家米尔斯提醒我们：个人烦恼往往连着更大的社会结构。他提出的社会学的想象力，就是让人在个人处境和历史、制度之间建立联系。这本书教我们区分私人困扰与公共议题：一个人失业是个人困扰，当大量人同时失业就变成公共议题。理解这一点，能帮我们少一点自责，多一点对处境的清醒判断。</p><ul class="pts"><li>一个人失业是私人烦恼，一群人失业就成了公共议题。</li><li>社会学的想象力，是把个人遭遇放回社会结构中去看。</li><li>少一点自我责备，多一点对制度与环境的清醒判断。</li><li>看清处境不等于推卸责任，而是找到更有效的行动方向。</li></ul><details><summary>读完整讲解</summary><div class="body"><p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">很多人都有过这样的时刻：工作不顺，觉得是自己能力不行；感情受挫，觉得是自己不够好；生活压力大，觉得是自己不够努力。这种把问题往自己身上揽的习惯，几乎成了默认的思维方式。但社会学家米尔斯在《社会学的想象力》里提出了一个不同的视角，他提醒我们，很多被当作个人失败的事情，其实是更大的社会结构在起作用。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">这本书要回答的问题很直接：普通人如何理解自己所处的时代和自己的处境。米尔斯认为，人们常常困在日常生活里，看不清自己与外部世界的关系。而社会学的想象力，就是让人跳出个人视角，把个人经历放到社会和历史的大背景中去理解。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">那社会学的想象力到底是什么？简单说，它是一种转换视角的能力。它要求我们区分两类问题：一类叫私人困扰，一类叫公共议题。米尔斯举过一个很清楚的例子。如果一个城市里只有一个人失业，那这是他的私人困扰，我们可以去看看他的技能、他的求职状态。但如果一个城市里有大量的人同时失业，那就不能只怪个人了，这已经变成了公共议题，背后可能涉及经济结构、产业变化、就业政策等更大的因素。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">再举一个生活里的例子。一个年轻人觉得自己买不起房，是因为自己工资低、不够节省。这是私人困扰的视角。但如果把视角拉远，看到同龄人普遍面临同样的处境，看到房价、收入、家庭支持之间的普遍关系，就会发现这更像是一个公共议题。这不是说个人努力不重要，而是说，只从个人身上找原因，可能会看漏真正关键的部分。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">这个区分为什么和你有关？因为它直接影响你怎么看待自己的处境。当你把所有问题都归因于自己，容易陷入自责和焦虑，觉得是自己不够好。而当你意识到某些困难是结构性的，你可能会松一口气，也可能会更清楚地知道，该往哪个方向使劲。比如，与其反复责怪自己不够努力，不如去了解行业的变化、岗位的需求，或者寻找同处境的人交流。看清处境，不等于推卸责任，而是让行动更有针对性。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">还有一个值得关注的点是，社会学的想象力不只用来理解困境，也用来理解他人的处境。当你看到别人做出你觉得不可理解的选择时，试着想想他背后的环境、资源和限制，可能会少一点评判，多一点理解。这在人际关系里尤其有用。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">今天就能用上的一个具体动作是：找一个你最近感到困扰的具体问题，拿一张纸，左边写下你能想到的个人原因，右边写下可能涉及的外部因素，比如行业趋势、经济环境、家庭背景、制度规则。写完之后，问自己一句：这个问题，是不是也有很多人正在经历？如果答案是肯定的，那它可能就不只是你一个人的事。这个动作不需要任何专业知识，几分钟就能做完，但它能帮你把视角从自我责备里拉出来。</p>
+<p style="margin:0 0 1.35em;font-size:16px;line-height:1.85;color:#3f3f3f;letter-spacing:0.3px;">需要说明的是，社会学的想象力不是让人把一切归咎于环境。米尔斯强调的是在个人与社会之间建立联系，而不是简单地选一边。个人努力依然重要，但理解结构，能让努力用在对的地方。这中间的平衡，还存在不确定性，需要每个人根据自己的处境去判断。</p></div></details><audio class="audio" controls preload="none" src="audio/2026-11-27-books.mp3"></audio><p class="meta">生成于 2026-11-26 23:57</p></section>
+<footer>
+<p>《我的窗口》· 每日学习订阅。内容基于公开数据与来源生成，仅供参考，不构成投资建议。</p>
+<p>来源：<a href="https://www.marktechpost.com/2026/11/26/sakana-ai-namazu-small-30b-nemotron-3-nano/">Sakana AI Releases Namaz</a> · <a href="https://hackaday.com/2026/11/26/another-split-flap-display-you-can-print-yourself/">Another Split Flap Displ</a> · <a href="https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/">Nvidia hits pause on chi</a> · <a href="https://techcrunch.com/2026/11/26/is-alice-huang-a-spy-or-not/">Is Alice Huang a spy or </a> · <a href="https://techcrunch.com/2026/11/26/x-finally-gets-parental-controls-after-20-years/">X finally gets parental </a> · <a href="https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/">Former OpenAI researcher</a> · <a href="https://hackaday.com/2026/11/26/location-accurate-weather-for-your-gecko/">Location-Accurate Weathe</a> · <a href="https://arstechnica.com/cars/2026/11/ford-unveils-the-gt41-as-it-hopes-to-win-le-mans-again/">Ford unveils the GT41 as</a> · <a href="https://github.com/Marvisak/VIctory">Marvisak/VIctory (GitHub</a> · <a href="https://github.com/xcl-dev/xcl">xcl-dev/xcl (GitHub)</a> · <a href="https://github.com/4lwayz/portwatch-vi">4lwayz/portwatch-vi (Git</a> · <a href="https://github.com/AFK-surf/xnulinux">AFK-surf/xnulinux (GitHu</a></p>
+<p>页面由 GitHub Actions 每日自动生成并发布。</p>
+</footer>
+</div></body></html>
